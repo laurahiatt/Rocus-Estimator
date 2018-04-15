@@ -101,3 +101,26 @@ rect:hover {
     font: 10px sans-serif;
     text-anchor: end;
 }
+
+.widget {
+  height: 100vh;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.progress-bar {
+  fill: #ddd;
+}
+
+.progress-bar-bg {
+  fill: #3f3f3f;
+}
+
+.progress-label {
+  fill: #aaa;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
