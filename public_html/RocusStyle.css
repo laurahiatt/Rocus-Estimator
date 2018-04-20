@@ -59,7 +59,7 @@ div {
     color: #618193;
 }
 #slidingbar-area .slide-excerpt h2, #slidingbar-area ul, .counter-box-content, .fusion-alert, .fusion-blog-layout-timeline .fusion-timeline-date, .fusion-footer-widget-area .slide-excerpt h2, .fusion-footer-widget-area ul, .fusion-progressbar .progress-title, .fusion-tabs-widget .tab-holder .news-list li .post-holder .meta, .fusion-tabs-widget .tab-holder .news-list li .post-holder a, .gform_wrapper .gfield_description, .gform_wrapper label, .jtwt .jtwt_tweet, .post-content blockquote, .project-content .project-info h4, .review blockquote q, .sidebar .jtwt .jtwt_tweet, .sidebar .slide-excerpt h2, body {
-    font-size: 22px;
+    font-size: 30px;
 }
 #nav ul li ul li a, #reviews #comments > h2, #side-header .fusion-contact-info, #side-header .header-social .top-menu, #sticky-nav ul li ul li a, #wrapper #nav ul li ul li > a, #wrapper #sticky-nav ul li ul li > a, .avada-container h3, .comment-form input[type="submit"], .ei-title h3, .fusion-accordian .panel-body, .fusion-image-wrapper .fusion-rollover .fusion-rollover-content .fusion-rollover-categories, .fusion-image-wrapper .fusion-rollover .fusion-rollover-content .fusion-rollover-title, .fusion-image-wrapper .fusion-rollover .fusion-rollover-content .price, .fusion-image-wrapper .fusion-rollover .fusion-rollover-content a, .fusion-main-menu .sub-menu, .fusion-main-menu .sub-menu li a, .fusion-megamenu-widgets-container, .fusion-megamenu-wrapper .fusion-megamenu-submenu > a:hover, .fusion-megamenu-wrapper li .fusion-megamenu-title-disabled, .fusion-page-title-bar h3, .gform_page_footer input[type=button], .meta .fusion-date, .more, .post-content blockquote, .review blockquote div strong, .review blockquote q, .ticket-selector-submit-btn[type=submit], body {
     line-height: 1.68;
@@ -74,7 +74,9 @@ body {
     color: #747474;
     min-width: 320px;
     -webkit-text-size-adjust: 100%;
-    font: 13px/20px PTSansRegular,Arial,Helvetica,sans-serif;
+    font: 15px/22px PTSansRegular,Arial,Helvetica,sans-serif;
+    
+    
 }
 .fusion-row:after, .fusion-row:before {
     content: " ";
@@ -93,11 +95,12 @@ body {
   width: 200px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #cf0a2c;
+  
 }
 
 .progress-bar {
   fill: #ddd;
+  background-color: #cf0a2c;
 }
 
 .progress-bar-bg {
@@ -111,3 +114,4 @@ body {
   text-anchor: middle;
   dominant-baseline: central;
 }
+
