@@ -88,25 +88,12 @@ body {
     display: table;
 }
 
-rect{
-    fill: darkred;
-}
-
-rect:hover {
-    fill: darkblue;
-}
-
-.chart text {
-    fill: white;
-    font: 10px sans-serif;
-    text-anchor: end;
-}
-
 .widget {
-  height: 100vh;
+  height: 30vh;
   width: 200px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #cf0a2c;
 }
 
 .progress-bar {
