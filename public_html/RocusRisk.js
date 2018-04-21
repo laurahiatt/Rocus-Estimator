@@ -15,23 +15,35 @@ function clickHandle() {
     var p = Number(poin.value);
     var lost = document.getElementById("lostC");
     var l = Number(lost.value);
+
+    if (isNaN(r) || isNaN(ep) || isNaN(c) || isNaN(p) || isNaN(l)) {
+        alert("Please provide valid input (all numerical values, no $ sybmols, etc.)");
+        window.location.reload(true);
+    }
 	
-	
-    var probability = (0.01024*ep)-(0.00000004345*r)+(0.0000264*c)-(0.01087*p)+0.211;
-    if (probability>1){
+    var probability = (0.01024*ep)-(0.00000004345*r)+(0.0000264*c)-(0.01087*p)+0.211;    
+    if (probability > 1 && probability <= 1.05){
 	probability = 1;
     }
-    if (probability<0) {
+    if (probability < 0 && probability >= -0.05) {
 	probability=0;
     }
 	//console.log(probability);
     var cost = l*r;
     var rocusPrice = 0.4*ep;
+    var probSuccessAttack =45.5;
+    if (c < 15000 && c > 1500){
+        probSuccessAttack = 0.000003 * c + 0.405;
+    }
+    if (c < 1500) {
+        probSuccessAttack = 0.41;
+    }
+    probability = probability.toFixed(2);
     document.getElementById("prob").value = probability;
     var costW = c+0.001*probability*cost + rocusPrice;
-    var costWO = c+0.43*probability*cost + c;
-    document.getElementById("costWith").value = costW;
-    document.getElementById("costWithout").value = costWO;
+    var costWO = c+probSuccessAttack*probability*cost + c;
+    document.getElementById("costWith").value = costW.toFixed(2);
+    document.getElementById("costWithout").value = costWO.toFixed(2);
     
     //chart.update(probability);
 }
@@ -120,18 +132,25 @@ window.onload=function(){
 	var button = document.getElementById("calc");
         button.addEventListener("click",clickHandle);
         button.addEventListener("click", function() {
+            console.log("here");
             if (clicked === false) {
                 clicked = true;
                 chart = radialProgress('.widget');
             }
-                var p = document.getElementById("prob");
-                pval = p.value * 100;
-                let progress = [pval];
-                let state = 0;
-                d3.interval(function(){
-                chart.update(pval);
+            var p = document.getElementById("prob");
+            pval = p.value * 100;
+            console.log(pval);
+            if (pval > 105 || pval < -5) {
+                alert("Your company characteristics are outside the bounds of Rocus' current customers, so we cannot definitively calculate your risk.");
+                window.location.reload(true);
+            }
+            
+            let progress = [pval];
+            let state = 0;
+            d3.interval(function(){
+            chart.update(pval);
                 //state = (state + 1) % progress.length
-                }, 2000);
+            }, 2000);
             
         });
         
