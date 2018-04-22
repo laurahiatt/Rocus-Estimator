@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 
+
+
 function clickHandle() {
     var rev = document.getElementById("estRev");
     var r = Number(rev.value);
@@ -17,7 +19,7 @@ function clickHandle() {
     var l = Number(lost.value);
 
     if (isNaN(r) || isNaN(ep) || isNaN(c) || isNaN(p) || isNaN(l)) {
-        alert("Please provide valid input (all numerical values, no $ sybmols, etc.)");
+        alert("Please input only numbers, and do not use commas or symbols such as $ or %.");
         window.location.reload(true);
     }
 	
@@ -30,20 +32,22 @@ function clickHandle() {
     }
 	//console.log(probability);
     var cost = l*r;
-    var rocusPrice = 0.4*ep;
+    var rocusPrice = 50*p;
     var probSuccessAttack =45.5;
     if (c < 15000 && c > 1500){
-        probSuccessAttack = 0.000003 * c + 0.405;
+        probSuccessAttack = -0.000003 * c + 0.455;
     }
     if (c < 1500) {
         probSuccessAttack = 0.41;
     }
     probability = probability.toFixed(2);
     document.getElementById("prob").value = probability;
+    //var p = probability;
+    console.log(p);
     var costW = c+0.001*probability*cost + rocusPrice;
-    var costWO = c+probSuccessAttack*probability*cost + c;
-    document.getElementById("costWith").value = costW.toFixed(2);
-    document.getElementById("costWithout").value = costWO.toFixed(2);
+    var costWO = c+probSuccessAttack*probability*cost;
+    document.getElementById("costWith").value = costW.toFixed(0);
+    document.getElementById("costWithout").value = costWO.toFixed(0);
     
     //chart.update(probability);
 }
@@ -137,9 +141,12 @@ window.onload=function(){
                 clicked = true;
                 chart = radialProgress('.widget');
             }
+            
             var p = document.getElementById("prob");
             pval = p.value * 100;
-            console.log(pval);
+            //pval = p*100;
+            
+            console.log(p);
             if (pval > 105 || pval < -5) {
                 alert("Your company characteristics are outside the bounds of Rocus' current customers, so we cannot definitively calculate your risk.");
                 window.location.reload(true);
@@ -159,3 +166,4 @@ window.onload=function(){
 var clicked = false;
 var pval = 0;
 var progress=[pval];
+

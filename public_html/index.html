@@ -21,41 +21,43 @@ and open the template in the editor.
         <div>
             <p>The purpose of this tool is to inform businesses about the 
                 potential cost if subjected to a data breach. Input your company
-                characteristics below for a quick and easy risk assessment. </p>
+                characteristics below and click on the "Calculate my risk!" button 
+                for a quick and easy risk assessment. </p>
 
-<!--<script type="text/javascript" src="/scripts/popupAlert.js"></script>-->
 
             <table>
                 <tbody>
                     <tr>
                         <td style="width: 31%;vertical-align:top;">
 
-                            <p>What is your estimated yearly revenue?</p>
+                            <p>What is your estimated yearly revenue? (Do not
+                            include a $ symbol.)</p>
                             <input id="estRev" name="estRev" type="text" />
 
                             <p>How many employees does your company employ?</p>
                             <input id="numEmp" name="numEmp" type="text" />
 
-                            <p>What is your current spending on cybersecurity?</p>
+                            <p>What is your current spending on cybersecurity? (Do not
+                            include a $ symbol.) </p>
 
                             <input id="cybSpend" name="cybSpend" type="text" />
 
                             <p>How many endpoints do you have? 
-                                (Number of Laptops, Desktops, & Servers)</p>
+                               (number of laptops, desktops, & servers)</p>
                             <input id="points" name="points" type="text" />
 
                             <p>What percentage of clients would you lose if you experience 
-                                a data breach? Make your own educated prediction. Enter as 
-                                a percentage (0.0-1.0)</p>
+                                a data breach? Make your own educated prediction. Enter the percentage
+                                as a number from 0.0 to 1.0, and do not a include a % symbol.</p>
 
                             <input id="lostC" name="lostC" type="text" />
                             
                             <center>
                             
                                 <p><button id="calc">Calculate my risk!</button></p>
-                                <p><a href="Code Book.pdf" target="_blank"> Code Book</a></p>
-                                <p><a href="Model Details.pdf" target="_blank"> Model Details</a></p>
-                                <p><a href="Works Cited.pdf" target="_blank"> Works Cited</a></p>
+                                <p><a href="Details of Calculations and Model.pdf" target="_blank">Details of Calculations & Model</a></p>
+                                <p><a href="Codebook.pdf" target="_blank">Codebook</a></p>
+                                <p><a href="Works Cited.pdf" target="_blank">Works Cited</a></p>
                             </center>
                             
                         </td>
@@ -63,15 +65,15 @@ and open the template in the editor.
                         </td>
                         <td style="width: 31%; vertical-align:top;">
                             <p>The financial impact can be downright detrimental to SMBs.
-                                The average cost of a data breach in North America is $117,000.
+                                The average cost of a data breach in North America is $117,000 (Kaspersky 2016).
                             </p>
 
-                            <p>As seen in the graph below, the last five years 
-                                have shown a steady increase in the proportion 
-                                of all attacks targeting businesses with less 
-                                than 250 employees
+                            <p>As illustrated in the graph below, the last five years 
+                                have seen a steady increase in the proportion 
+                                of all cybersecurity attacks that target businesses with less 
+                                than 250 employees (Symantec 2018).
                             </p>
-                            <center><img src="attacks.jpg"></center>
+                        <center><img src="attacks.jpg" alt="atk"></center>
                             <p>Cybersecurity insurance helps companies recover 
                                from any sort of data loss.  Even though prices 
                                and exclusions (a risk not covered by an insurance 
@@ -80,9 +82,9 @@ and open the template in the editor.
                                cybersecurity insurance requirements.  These 
                                typical requirements are ____.  According to a 
                                2017 FICO survey, 50% of US executives surveyed 
-                               said their firm has no cybersecurity insurance 
+                               said their firm has no cybersecurity insurance, 
                                and 27% of US executives said their firms have 
-                               no plans to take out cybersecurity insurance.  
+                               no plans to take out cybersecurity insurance (PR Newswire 2017).  
                                In today’s world, it is vital for a company to 
                                maintain strong cybersecurity insurance.
                             </p>
@@ -95,13 +97,13 @@ and open the template in the editor.
                                 including costs from cybersecurity attacks:</p>
 
                             <p>Estimated cost with Rocus' product:</p>
-                            <input id="costWith" name="costWith" type="text" />
+                            <p>$<input id="costWith" name="costWith" type="text" /></p>
 
                             <p>Estimated cost without Rocus' product:</p>
-                            <input id="costWithout" name="costWithout" type="text" />
+                            <p>$<input id="costWithout" name="costWithout" type="text" /></p>
 
-                            <p>Probability of suffering from a successful cybersecurity attack</p>
-                            <input id="prob" name="prob" type="text" />
+                            <p>Probability of suffering from a successful cybersecurity attack:</p>
+                            <input id="prob" name="prob" type="hidden" />
                             <div id="widget" class='widget'></div>
                         </td>
                     </tr>
