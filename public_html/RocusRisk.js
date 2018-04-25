@@ -7,6 +7,20 @@
 
 
 function clickHandle() {
+    
+    var name = document.getElementById("name");
+    var comp = document.getElementById("company");
+    var mail = document.getElementById("emailA");
+    
+    var contact = name.value;
+    var company = comp.value;
+    var email = mail.value;
+    
+    if (contact == NaN || company == NaN || email == NaN) {
+                alert("You must input your contact information to get a risk assessment");
+                window.location.reload(true);
+            }
+    
     var rev = document.getElementById("estRev");
     var r = Number(rev.value);
     var emp = document.getElementById("numEmp");

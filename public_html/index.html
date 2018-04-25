@@ -14,7 +14,7 @@ and open the template in the editor.
         
     </head>
     <body>
-
+        <div>
         <script src="RocusRisk.js"></script>
         <h1 class="entry-title" data-fontsize="54" data-lineheight="62" style="font-size: 46.022px; line-height: 52.84px;"><center>REALIZING YOUR RISK</h1> <center> </h1>
 
@@ -24,10 +24,45 @@ and open the template in the editor.
                 characteristics below and click on the "Calculate my risk!" button 
                 for a quick and easy risk assessment. </p>
 
-
             <table>
                 <tbody>
                     <tr>
+                        <td style="width: 31%; vertical-align:top;">
+                            <p> Company name: <input id="company" name="company" type="text"/></p>
+                            <p> Name: <input id="name" name="name" type="text"/></p>
+                            <p> Email Address: <input id="emailA" name="emailA" type="text"/></p>
+                            
+                            <p>The financial impact from a cybersecurity attack can be downright detrimental to SMBs.
+                                The average cost of a data breach in North America is $117,000 (Kaspersky 2016).
+                            </p>
+
+                            <p>According to a Ponemon Institute research study from 2017, 
+                                cybersecurity attacks have targeted SMBs more in the 
+                                past 12 month, with an increase from 55 percent to 
+                                61 percent of respondents (Ponemon 2017).
+                            </p>
+                            
+                            <p>Cybersecurity insurance helps companies recover 
+                                from any sort of data loss. Even though prices 
+                                and exclusions (a risk not covered by an insurance 
+                                policy) vary widely between insurers, there are 
+                                still common areas that are covered with typical 
+                                cybersecurity insurance requirements. These 
+                                typical requirements are incident response 
+                                expense coverage, funds transfer coverage, 
+                                personal information protection, and incident 
+                                response consultation. According to a 2017 FICO 
+                                survey, 50% of US executives surveyed said their 
+                                firm has no cybersecurity insurance, and 27% of 
+                                US executives said their firms have no plans to 
+                                take out cybersecurity insurance (PR Newswire 2017). 
+                                In today’s world, it is vital for a company to maintain 
+                                strong cybersecurity insurance.
+                            </p>
+                        </td>
+                        </td>
+                        <td style="width: 3%;">
+                        </td>                        
                         <td style="width: 31%;vertical-align:top;">
 
                             <p>What is your estimated yearly revenue? (Do not
@@ -37,7 +72,7 @@ and open the template in the editor.
                             <p>How many employees does your company employ? (Acceptable Range: 15-750)</p>
                             <input id="numEmp" name="numEmp" type="text" />
 
-                            <p>What is your current spending on cybersecurity? (Do not
+                            <p>What is your current annual spending on cybersecurity? (Do not
                             include commas or a $ symbol. Acceptable Range: 2500-25000) </p>
 
                             <p>$<input id="cybSpend" name="cybSpend" type="text" /></p>
@@ -47,7 +82,8 @@ and open the template in the editor.
                             <input id="points" name="points" type="text" />
 
                             <p>What percentage of clients would you lose if you experience 
-                                a data breach? Make your own educated prediction. Enter the percentage
+                                a data breach? Make your own educated prediction. The minimum
+                                average is 0.2, but it will vary based on industry. Enter the percentage
                                 as a number from 0.0 to 1.0, and do not include a % symbol.</p>
 
                             <input id="lostC" name="lostC" type="text" />
@@ -60,36 +96,6 @@ and open the template in the editor.
                                 <p><a href="Works Cited.pdf" target="_blank">Works Cited</a></p>
                             </center>
                             
-                        </td>
-                        <td style="width: 3%;">
-                        </td>
-                        <td style="width: 31%; vertical-align:top;">
-                            <p>The financial impact can be downright detrimental to SMBs.
-                                The average cost of a data breach in North America is $117,000 (Kaspersky 2016).
-                            </p>
-
-                            <p>As illustrated in the graph below, the last five years 
-                                have seen a steady increase in the proportion 
-                                of all cybersecurity attacks that target businesses with less 
-                                than 250 employees (Symantec 2018).
-                            </p>
-                        <center><img src="attacks.jpg" alt="atk"></center>
-                            <p>Cybersecurity insurance helps companies recover 
-                               from any sort of data loss.  Even though prices 
-                               and exclusions (a risk not covered by an insurance 
-                               policy) vary widely between insurers, there are 
-                               still common areas that are covered with typical 
-                               cybersecurity insurance requirements.  These 
-                               typical requirements are ____.  According to a 
-                               2017 FICO survey, 50% of US executives surveyed 
-                               said their firm has no cybersecurity insurance, 
-                               and 27% of US executives said their firms have 
-                               no plans to take out cybersecurity insurance (PR Newswire 2017).  
-                               In today’s world, it is vital for a company to 
-                               maintain strong cybersecurity insurance.
-                            </p>
-                        </td>
-
                         <td style="width: 3%;">
                         </td>
                         <td style="width: 31%; vertical-align:top">
@@ -110,6 +116,13 @@ and open the template in the editor.
                 </tbody>
             </table>
             
+        </div>
+        <p id="studnames" style="font-size:10px">
+        This page was created through the collaboration of Davidson College 
+        and Rocus Networks. Students Laura Hiatt (‘18), Jonas Jacobson (‘21), 
+        and Kendall Thomas (‘19) designed and implemented this web page in the 
+        spring of 2018 as a part of CIS 230: Seminar in Applied Research Design 
+        and Data Analysis. </p>
         </div>
     </body>
 </html>
